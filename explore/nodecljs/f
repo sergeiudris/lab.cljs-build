@@ -1,0 +1,12 @@
+#!/bin/bash
+
+dev(){
+    clj -A:core:dev:local -m build.main
+}
+
+compile(){
+    clj -A:core:dev:local -m cljs.main -co build.edn -c nod.main
+}
+
+
+"$@"

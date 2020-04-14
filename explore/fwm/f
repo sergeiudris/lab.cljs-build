@@ -1,0 +1,21 @@
+#!/bin/bash
+
+dev() {
+    # clojure -m figwheel.main -b dev -r
+    # clojure -A:build-dev
+    clojure -m figwheel.main -co dev.cljs.edn -c -r
+}
+
+devnode() {
+    clojure -m figwheel.main -t node -b dev -r
+}
+
+dev_nrepl(){
+  # changed version 
+  clojure \
+  -m nrepl.cmdline  \
+  --middleware "[cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]" \
+  --bind "0.0.0.0" --port 8899
+}
+
+"$@"

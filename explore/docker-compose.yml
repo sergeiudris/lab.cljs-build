@@ -1,0 +1,64 @@
+version: "3.7"
+
+services:
+
+  app1:
+    image: abc.app1
+    volumes:
+      - ./system:/ctx/system
+      - ./apps/app1:/ctx/app
+    build:
+      context: ./
+      dockerfile: ./apps/app1/Dockerfile
+    ports:
+      - 5522:7788
+    command: bash f dev
+    # command: tail -f /dev/null
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 4096M
+
+  app2:
+    image: abc.app2
+    volumes:
+      - ./system:/ctx/system
+      - ./apps/app2:/ctx/app
+    build:
+      context: ./
+      dockerfile: ./apps/app2/Dockerfile
+    ports:
+      - 5511:5511
+      - 5515:5515
+      - 5531:5531
+    command: bash f dev
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 4096M
+
+  app3:
+    image: abc.app3
+    volumes:
+      - ./system:/ctx/system
+      - ./apps/app3:/ctx/app
+    build:
+      context: ./
+      dockerfile: ./apps/app3/Dockerfile
+    ports:
+      - 5533:8899
+    command: bash f dev
+    # command: tail -f /dev/null
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 4096M

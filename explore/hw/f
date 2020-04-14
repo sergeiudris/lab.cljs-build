@@ -1,0 +1,19 @@
+#!/bin/bash
+
+dev(){
+    clj --main cljs.main --compile hw.core --repl
+}
+
+release(){
+    clj -m cljs.main --optimizations advanced -c hw.core
+}
+
+compile_node(){
+    clj -m cljs.main --target node  --output-to out/node-main.js -c hw.core
+}
+
+run_node(){
+    node out/node-main.js
+}
+
+"$@"

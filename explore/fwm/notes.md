@@ -1,0 +1,7 @@
+- figwheel-main
+  - DOC figwheel-main with nREPL
+  - https://github.com/bhauman/figwheel-main/issues/24
+    - bhauman on nrepl
+    - https://clojurians-log.clojureverse.org/figwheel-main/2018-08-02
+  - bottomline
+    - does not provide nrepl

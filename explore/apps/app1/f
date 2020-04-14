@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+dev(){
+  clojure -A:core:dev:local -m abc.app1
+}
+
+dock() {
+  
+    docker build -t abc.app1 -f Dockerfile ../../
+    docker run  --rm \
+                --cpus=4.0 \
+                --memory=8g \
+                --name abc.app1 \
+                -it \
+                -p 5522:7788 \
+                -v "$(cd ../../ && pwd)"/system:/ctx/system \
+                -v "$(cd ../../ && pwd)"/apps/app1:/ctx/app \
+                -e "appenv={:optimized false}" \
+                 abc.app1 \
+                 bash
+}
+
+"$@"

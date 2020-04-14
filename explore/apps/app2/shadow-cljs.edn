@@ -1,0 +1,31 @@
+{:deps         true
+
+ :nrepl        {:port 5511
+                :host "0.0.0.0"
+              ;   :init-ns abc.app2
+                }
+
+ :http {:port 5531
+        :host "0.0.0.0"}
+ :builds
+ {:app {:target :browser
+        :output-dir "resources/public/js-out"
+        :asset-path "/js-out"
+        :module-loader true
+        :modules
+        {:main {:entries [abc.app2]}}
+        :compiler-options
+        {:infer-externs    :auto
+         :externs ["datascript/externs.js"]
+         :closure-warnings {:global-this :off}
+         :closure-defines  {"abc.app2._some_val_"         true}}
+
+        :devtools
+        {:repl-init-ns abc.app2
+         :repl-pprint true
+         :autobuild false
+         :http-root  "resources/public"
+         :devtools-url "http://localhost:5531" 
+         :http-port  5515
+       ;   :preloads   []
+         }}}}
