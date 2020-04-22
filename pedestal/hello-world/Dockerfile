@@ -7,7 +7,8 @@ RUN apt-get update && \
             git-core  \
             rlwrap  \
             software-properties-common  \
-            unzip wget curl net-tools lsof
+            unzip wget curl net-tools lsof \
+            zlib1g-dev gcc libc6-dev
 
 WORKDIR /tmp
 
@@ -18,12 +19,12 @@ WORKDIR /tmp
 ## graalvm
 # https://github.com/arjones/docker-graalvm/blob/master/Dockerfile
 # https://github.com/OlegIlyenko/graalvm-native-image/blob/master/Dockerfile
-ENV GRAALVM_VERSION=19.3.0
+ENV GRAALVM_VERSION=20.0.0
 ENV SUFFIX_URL=java8-linux-amd64-${GRAALVM_VERSION}
 ENV SUFFIX_DIR=java8-${GRAALVM_VERSION}
 ENV PATH $PATH:/usr/local/graalvm/bin
-#  dir will be graalvm-ce-java8-19.3.0
-RUN curl -Ls "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-19.3.0/graalvm-ce-${SUFFIX_URL}.tar.gz" | \
+#  dir will be graalvm-ce-java8-${GRAALVM_VERSION}
+RUN curl -Ls "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-${GRAALVM_VERSION}/graalvm-ce-${SUFFIX_URL}.tar.gz" | \
     tar zx -C /usr/local/ && \
     ls -l /usr/local/ && \
     rm -f /usr/local/graalvm-ce-${SUFFIX_DIR}/src.zip && \

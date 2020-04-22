@@ -17,7 +17,7 @@
   :optimized {:extra-deps {}}
   :local {:extra-deps {}}
   :mem {:jvm-opts ["-Xms1024m" "-Xmx11998m"]}
-  :native-image {:main-opts ["-m clj.native-image app.main"
+  :native-image {:main-opts ["-m clj.native-image hello-world.server"
                              "--initialize-at-build-time"
                          ;     "--enable-url-protocols=http"
                          ;     "--enable-http"
