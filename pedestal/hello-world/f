@@ -17,6 +17,12 @@ permissions(){
     sudo chmod -R 777 tmp/ 
 }
 
+native(){
+
+  clojure -A:core:native-image
+
+}
+
 dock() {
   
     docker build -t pedestal.hello-world -f Dockerfile .
@@ -25,7 +31,6 @@ dock() {
                 --memory=8g \
                 --name starnet.server \
                 -it \
-                --network starnet \
                 -p 7788:7788 \
                 -p 8080:8080 \
                 -p 8443:8443 \
