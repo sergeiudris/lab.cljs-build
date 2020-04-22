@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+compile(){
+  mkdir -p classes
+  rm -rf classes/*
+  clojure -A:core:dev:local -m hello-world.server
+}
+
+
+dev(){
+  compile
+  clj -A:core:dev:local -m hello-world.server
+}
+
+permissions(){
+    sudo chmod -R 777 tmp/ 
+}
+
+dock() {
+  
+    docker build -t pedestal.hello-world -f Dockerfile .
+    docker run  --rm \
+                --cpus=4.0 \
+                --memory=8g \
+                --name starnet.server \
+                -it \
+                --network starnet \
+                -p 7788:7788 \
+                -p 8080:8080 \
+                -p 8443:8443 \
+                -v "$(pwd)":/ctx/app \
+                 pedestal.hello-world \
+                 bash
+}
+
+"$@"

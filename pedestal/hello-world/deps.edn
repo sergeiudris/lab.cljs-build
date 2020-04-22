@@ -1,0 +1,18 @@
+{:paths ["src" "test" "resources" "classes"]
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://clojars.org/repo/"}}
+ :deps {}
+ :aliases
+ {:core {:extra-deps
+         {org.clojure/clojure  {:mvn/version "1.10.0"}
+          io.pedestal/pedestal.service {:mvn/version "0.5.7"}
+          io.pedestal/pedestal.route   {:mvn/version "0.5.7"}
+          io.pedestal/pedestal.jetty   {:mvn/version "0.5.7"}
+          ch.qos.logback/logback-classic   {:mvn/version "1.2.3"
+                                            :exclusions [org.slf4j/slf4j-api]}
+          org.slf4j/jul-to-slf4j {:mvn/version "1.7.25"}
+          org.slf4j/jcl-over-slf4j {:mvn/version "1.7.25"}
+          org.slf4j/log4j-over-slf4j {:mvn/version "1.7.25"}}}
+  :dev {:extra-deps {}}
+  :optimized {:extra-deps {}}
+  :local {:extra-deps {}}}}
