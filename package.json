@@ -2,7 +2,6 @@
 	"name": "mult",
 	"description": "cljc repl for vscode",
 	"version": "0.1.0",
-	"publisher": "github.com/fo4ram/mult",
 	"repository": "https://github.com/fo4ram/mult",
 	"engines": {
 		"vscode": "^1.30.0"
