@@ -1,0 +1,949 @@
+p 65aeec9 Initial commit
+s 65e212d wip
+s e74d75d build
+s 1414a4c wip
+s bc54461 wip
+s 3ee4ec6 Update README.md
+s 4289572 wip
+s 055b0e2 wip
+s 379efe9 wip
+s 537c23d wip
+s 8d7fbe7 Update design.md
+s ed97cce Update design.md
+s 3382156 wip
+s 2526af4 wip
+s 643a5a7 wip
+s b6648ce wip
+s 0acf987 wip
+s 48c6bbe wip
+s 02ceb21 wip
+s 77f067b Update design.md
+s 333e23d wip
+s fbfb66b wip
+s 4c9b3fb wip
+s 1b7c51b wip
+s bce6f98 wip
+s ac51f01 wip
+s 73050ea wip
+s 903d06e wip
+s 3415450 wip
+s 1067f64 wip
+s 56d128a wip
+s 83d3b09 wip
+s 279c3b7 wip
+s 580a93d wip
+s f2b240d wip
+s 4130261 wip
+s 3667da1 wip
+s 80927ba wip
+s 152e34b wip
+s 21e0e43 wip
+s e82dc2d wip
+s 629b0b3 wip
+s 76ef9ac wip
+s 43581fa wip
+s 329545f wip
+s 51f69f2 wip
+s 428538a wip
+s f8fd0e9 notes
+s fd5ecd4 build
+s 6357767 build
+s 53ef162 wip
+s a702e5a wip
+s d48a02e wip
+s 0eefd89 design
+s a20b8bc design
+s 30fab82 wip
+s 8de43ce wip
+s 8787aaf wip
+s 8a9030d wip
+# initial commit
+# - design
+# - docker, kafka, app, ui
+
+p fff400d Update README.md
+s 24a62ea starnet
+# rename to starnet
+
+p f4c81f8 design
+s c64af7a design
+s d6b2be3 wip
+s d91caf9 wip
+s 709b8bb wip
+s db15d84 wip
+# design
+# - completeness of the game
+
+p cb260c9 Create LICENSE
+s 666ba66 Create COPYRIGHT
+s e9a2cf7 docs
+s 4d80c62 docs
+# create LICENSE, COPYRIGHT
+
+p 8097f3d wip
+s ad48cd3 design
+s 0211064 wip
+s 61d411b design
+s e0976ba design
+# design
+# - gameplay of v0.1
+
+p 39d45ea wip
+s 47c32fe kafka wordcount
+s d32ab5b wip
+s d82e87d kstream into kconsumer from repl via future
+s 109b4da wip
+s 206c582 wip
+s 04bdb66 wip ktable kstream records
+s ac4166f org
+s bf8fa50 kstreams pipe example
+s 94e9634 kstreams linesplit example
+s 4d939db wip
+s 056755c org
+s 1d12da5 design
+s d90be22 design
+s e39333a wip
+s b378eb3 wip kafka streams
+s da5fc94 wip kstreams
+s 7cb3436 :build rename kafka1 to broker1
+s 1b57463 :build rename kafka1 to broker1
+s 743f393 wip
+s 6e9c414 wip
+# kafka streams samples 
+# - wordcount, linesplit, pipe, ktable
+# - kstream into kconsumer from repl via future
+# - rename kafka1 to broker1
+
+p 5e27554 wip
+s e354a90 wip
+s 8f3f43f wip
+s 7b54005 wip
+s 8b9a4f9 wip
+s 3078773 wip
+s 901c661 wip
+# repl interface (system's api)
+
+p 7778c91 wip
+s 2ba2632 wip
+s 9929cb4 wip
+s 7856e7e wip
+s fc5bb73 wip
+s 356f6c4 wip
+s c92facc :step serialize records and store in .edn using clj-transit; aot compile app.kafka.serdes ns from dev.compile to use transit ser/de classes from kafka
+s 7867700 org
+s 1304f4a :step kstreams with TransitJsonSerde
+s 0ca6cc6 wip
+# kafka TransitJsonSerde
+# - serialize records and store in .edn using clj-transit; aot compile app.kafka.serdes ns from dev.compile to use transit ser/de classes from kafka
+
+p 1491b20 :step :build  docker volumes to persist kafka and zoo data"
+s 00b48a7 build
+s b6ecd50 build
+# persist kafka and zookeeper data in docker volumes
+
+p 18eb3cb :step ktable , ReadOnlyKeyValueStore .get
+s e4a2f36 wip
+s cb835ac org
+s 6272ad8 wip
+s f448364 wip
+s 7ffd92d wip
+s 1cff880 wip
+s 044545e :step KGroupedStream reduce using transit and (merge ag v)
+s 3122ea7 :wip kafka GroupedStream reduce example
+s 6efc028 wip
+s f34f4a4 :wip
+# ktable, kstore, kgroupedstream
+# - ktable: ReadOnlyKeyValueStore .get
+# - KGroupedStream reduce using transit and (merge ag v)
+
+p 538353f :design user.lists
+s bc884d9 design
+# design: user/lists
+
+p 15713fa wip
+s 2e8e531 wip iterator-seq
+s 1510eaa :step insert/delete with KGroupedStream aggregate
+s 506d7a2 wip
+# kafka store approximateNumEntries, iterator-seq
+
+p fc9d436 design
+s 5a20fb3 design
+s c869936 design
+s f976577 wip
+s e8bc693 design
+s fce681b desgin
+# design: time, events and ktopic; arbiter
+
+p 16d3a43 :step :build kafka application reset tool example
+# kafka application reset tool example
+
+p 0c04220 wip
+s c098302 :wip clojure.spec
+s 10c9303 :build deps
+s df30822 :build deps :dev prfoile
+s 6f82696 :wip spec and gen
+# introduce clojure.spec; spec and gen samples
+
+p e2ddd11 org
+s f9bd612 wip
+s b2e29c7 org
+s 0b737e0 org
+s cc3a2b7 wip
+s e711b0e wip
+s 43298d4 :wip stream store record changes to consumer
+s 163a078 wip
+s 4124665 wip
+# kafka: stream store record changes to kconsumer
+
+p 77d6bcb :step validating create-user with s/fdef
+s 107f673 :step s/fdef magic for produce-event create-user
+s 8139065 wip
+s 609265c :build docker run -e appenv=
+s 5bedb12 wip
+# spec:  s/fdef stest/instrument
+
+p a5d7dd6 wip
+s 4e71de1 wip
+s 69b9216 wip
+s 380283e wip
+s 7000d56 :wip polymorphism a-la-carte
+s aa46593 wip
+s b1aa314 wip
+s 8ec12ff wip
+s 438ee37 wip
+s e7055c2 wip
+s a434995 wip
+s 8bfa40a :wip user.data stream
+s 5a57ec8 :wip user.data stream
+s 1978d0f :wip kafka docs configs links
+s 7bf7e33 design
+# introduce polymorphism a-la-carte: defmulti derive
+
+p 1c6d08c design
+s d115af7 org
+s 789d156 wip
+s 0bcb345 desgin
+# design: data and security, no resource competetion
+
+p a0c0ace :wip game spec
+s de4d1a7 wip
+s 491a0f6 :wip spec
+s 20ef9f9 :wip :spec game entities
+s b018ac4 wip
+s 947488c wip
+s 843e718 :step :spec sets of events with multi-spec
+s ddbb08d wip
+s 3846416 wip
+s 7eb5122 wip
+s b98eeba :step game data and events; spec with multimethods, custom gens
+s 606a486 wip
+s f1a78eb :wip serde compare
+s 7b88cab wip
+s 21c6337 wip
+s dad789f wip
+s 6fb2772 :wip spec
+s 07d56c3 wip
+s 37429a9 :wip spec :ev.g.u/
+s 85f5c83 :step s/with-gen s/such-that  for :u/email
+s 1a2082b wip
+s 3d73e77 org
+s 4d798e5 wip
+s 0d81a2d design
+s e148879 wip
+# game spec, sets of evets, multi-spec, custom gens, s/with-gen s/such-that
+
+p 8d26678 wip
+s 57889f6 :wip variadic defmulti
+s 90dea57 :wip multimethods
+s e4c687f :step clj :arglists
+s 5911faf :step s/fdef s/alt s/? s/cat
+s 4f4c296 wip
+s d507ff7 wip
+s 62c9b98 wip
+s 5a8c6ab wip
+s 69230f1 wip
+s 491f795 wip multi
+s 27c8f12 wip
+s 6c441fe :wip send-event multimethod; derive relationships is app.alpha-spec
+s 4475357 wip
+s 44eaa97 wip
+s e166792 wip
+s d24bffe :step send-event multimethod with (type) dispatch and s/fdef to validate ev arg as :ev/event; not obligatory to validate other args - defmulti provides descriptive messages when args don't match a method
+s 5fbcea3 wip
+s 1cd118c :step core/send-event specced multimethod
+# send-event multimethod, derive relationships is app.alpha-spec
+# - variadic defmulti
+# - :arglists
+# - s/alt s/? s/cat
+# - s/fdef to validate ev arg as :ev/event
+
+p d26ef6a wip
+s 308ddf7 wip
+s f45a7c4 org
+s f091047 wip
+s 97882d3 wip
+s 5660c04 :org simplify
+s 2d4be28 wip
+s 1d9af52 :wip read-store fn with wth-open for kafka store iterator
+s cdf3935 wip
+s 4b8d59d :step crud for :ev.u/event eventset
+s 8556ef5 :wip :ev.g/event
+s e6ae798 :wip crud :g/game
+s 12fd2e5 wip
+s 185ccaa wip
+s 879c5f3 wip
+s 6bf3731 :wip next-state :post condition with  s/valid?
+s 5c4050f wip
+s 248e742 wip
+s da9690e wip
+s 1d6b2ae wip
+s 0b7597b wip
+s c88c51a :step stest/summarize-results
+s 2d7fbd6 wip
+s ab2b6f8 :wip stest
+s 3e03d45 :wip alter-var-root
+s 8d1fc8f wip
+s 97c966d wip
+# game next-state, spec, eventsets
+# - read-store fn with wth-open for kafka store iterator
+# - crud for :ev.u/event eventset
+# - :ev.g/event ,  :g/game
+# - next-state :post condition with  s/valid?
+# - stest/summarize-results
+# - alter-var-root clojure.test/*load-tests*
+
+p eda3136 :wip tests
+s 0b6241c :wip testing
+s 4b4c62a build
+s 60603bf build
+s 4e83320 build
+s 10e1be8 build
+s 98aa756 build
+s 80ca549 build
+s fecbe2a build
+s 64e2f40 build
+s a1f3679 build
+s 0ec13bb build
+s a1750d8 :wip deftest stest/check
+s 2ac3846 wip
+s 3c72c30 org
+s 495ae09 test.check
+s 17bc91b wip
+s dff25f3 :step added test spec.test/check test.check
+s 2e95a21 :wip other_tests
+s 69a8ac6 :wip testing
+s 1a45610 :wip testing
+s 45739e8 wip
+s 4df4c62 wip
+# introduce tests
+# - deftest stest/check test.check
+
+
+p 0812141 :step impl :ev/type defmethods via defmacro
+s 0a90b60 :wip s/multi-spec with custom retag
+# :ev/type defmethods via defmacro, s/multi-spec with custom retag
+
+p f0141c0 build
+s 0f1f93c build
+s 5175ff6 build
+# build: introduce starnet.common; unify volumes to use /ctx /ctx/data /ctx/app
+
+p 823c772 org
+s de08f35 build
+s 80da667 build
+s 6ae62e8 build
+s 37a751b build
+s d5cb8f6 build
+s e82109f build
+s 6327784 build
+s d831c98 build
+s 738c1ac build
+s aeae644 build
+s feb9c05 :step :build cljs repl
+# build and org to bring ui app to life
+
+p 4e7f4ba build
+s 10a28a9 build
+s a5a9b45 :step :build app and ui share common(cljc) dependency; cljs macros compilation; use of reader conditionals in common; cljs tests; spaces ok
+s 2f89c08 build
+# app and ui share common(cljc) dependency; cljs macros compilation; use of reader conditionals in common; cljs tests; spaces ok
+
+p ec3d7c1 :wip test.check gen/bind
+s aa42248 :wip spec gen
+s e2cfc7d build
+s 0130025 :wip with-gen-self for event generation
+s f8b4148 :wip spec generation
+s 9c8116a :wip geneartors
+s 18612b7 wip
+s 0d18509 wip
+s c9b04ef wip
+# spec, generators,  gen/bind , with-gen-self for event generation
+
+p b9c0e40 :build cljs
+s 8665112 wip
+s a5c91e8 :step :build running stest/check from cljs; was an issue with stest/check failing to macroexpand, current solution - reader conditionals
+s cd06e13 :wip testing
+s da30165 docs
+s f390700 :step run-all-tests regex to match all tests per runtime
+s 8be2fa7 build
+s 375e9c9 :build bash f test
+s fd567bb :wip using stest/summarize-results
+# tests: running stest/check from cljs, run-all-tests regex to match all tests per runtime
+# -  running stest/check from cljs; was an issue with stest/check failing to macroexpand, current solution - reader conditionals
+# -  bash f test
+
+p dbcba90 wip
+s b34be7b org
+s 10200ff org
+s dc5c7a9 org
+s 56865c6 org
+s 2422f81 org
+s 1aa542b wip
+s a8536dc :build serdes namespace must be imported
+# build: serdes namespace must be imported
+
+
+p 536fa45 wip
+s 2e8bd2a wip
+s 63424b0 docs
+s d220c78 :wip testsg
+s 0a3af81 :wip next-game-state
+s 86737c6 :build game001 cljc
+s 29cc22c wip
+s 0b253d2 wip
+s 0f3ea7c wip
+s 76855bf wip
+s c26cda6 wip
+s db679c7 docs
+s 7ee188e wip
+s c513443 :step using test.check to generate an enetity
+s f221e9f wip
+s 4e57f1a wip
+s 2764420 wip
+# game state and generators, using test.check to generate an enetity
+
+p eeed9f4 wip
+s 60cdf1b build
+s c28903f wip
+s 32fefac wip
+s 7b912b2 :wip clojure.logic
+s 14640ab :wip logic_tests
+s fdf9dab wip
+s 10704bc :wip logic examples
+s e0aa258 wip
+s 1af85f9 wip
+s c734880 wip
+s 1b00f96 wip
+s 4d26d93 wip
+s 8b1f4a0 wip
+s 4556cde docs
+s 6e3569a wip
+s 8c80154 wip
+s 8dd1feb wip
+s 3535f2e wip
+s e471871 wip
+s a040c96 build
+s f75e36c wip
+s 3e1e7f7 wip :tuesday defnc
+s e2a0e3c wip
+s 4ec1790 wip
+s 13307c5 wip
+s 8d9bc63 wip
+s c3e21b3 wip
+s 032d56b wip
+s 0015e2c wip
+s 25fc52c design
+s 11a4c37 org
+s 8909abc org
+s c1cd874 org
+s 2afbdb3 org
+s d1853ff docs
+s b0c3387 docs
+s 6c019fa :build core.matrix
+s bc991dd wip
+s 6ba8fa9 org
+s 0231ac1 docs
+s 703d417 docs
+s 61e9bb1 docs
+s 6e03e05 wip
+s fb52f32 wip
+s e96561c wip
+s 67c7e1d org
+s 5f5d34d org
+s 0bd517a build
+s 1f30585 wip
+s bf0d70a wip
+s 262da61 org
+# introduce: core.logic
+
+p cfb3590 :design game state
+s ecc067c design
+s c7129b5 design
+s 819082f docs
+s 6f1c5bf org
+# design: game is powerful, so is the client: compute derived state on the client
+
+p 5f0252c docs
+s 723d2e4 wip
+s d6444b4 docs
+s 870a3bf docs
+s cd9c426 notes
+s e976dfb notes
+s 455df1d design
+s 5300e65 pad
+s 68e7392 pad
+s 80e569d pad
+s 61b1349 pad
+s 685613b notes
+s 55be146 notes
+s cab93a3 notes
+s b567a85 :pad async
+# discover communicating sequatial processes: humbled and elevated, heard before but didn't hear
+
+p b8af8cd :step applied core.async
+s 104c104 :wip processes and queues
+s 869dabe build
+# first application of csp via core.async 
+
+p 75061ca ui csp
+s bd56d11 org
+# csp in ui 
+
+p 1018cb1 design
+s fcb5835 design
+s 090f780 design
+s 924f8e8 design
+s 5d6eb02 design
+s 6bdb552 design
+s 33b9934 design
+# design: rewrite, organize, processes and queues
+
+p eac5488 :build crux
+s 66af401 :samples crux
+s 5c8df3a samples
+s 8967e74 samples
+s aff05d0 :sampes crux
+s 2066701 build
+s ac95058 crux
+s 3eed38c :build crux deps
+s acf0b3c :build docker volume for crux
+# introduce crux
+
+p 56e5d19 notes
+s 5416302 org
+s d88c933 notes
+s 5f74801 notes
+s a5d8b82 design
+s 029d91a design
+s c4d245d notes
+s 804e060 proc-main
+s e1e4ff9 :build pedestal
+s 42a6bd5 :build http
+s d3b1eb4 :build https
+s ae3b5b4 http test
+s f1cc1bc notes
+s 790267c org
+# introduce pedestal
+
+p 9d617d7 design
+s cbe5071 design
+s 4e7db0d design
+s 870fe79 design
+s 554f2ac design
+s f4e14be design
+s d193a8f design
+# design: db and socket connections, interceptors and channels
+
+p ead26a2 :app proc-cruxdb
+s e8a9512 comments
+s 586dd4e design
+s 8a2f73a design
+s e03c7dd org processes
+s 91c1aa4 design
+s cc59435 proc-kproducer
+s ac87b98 access kstreams
+s 799e64f proc-kstreams create-topics-async
+s 2f4481f app access
+s 77b1af0 app
+s d99dac3 :app procs
+s 3aa7629 :kstreams setStateListener
+s 67e1f44 :app processes, use of async/mix
+# procs-kstreams, proc-kproducer, kstreams setStateListener, use of async/mix
+
+p 388741a app main
+s 8bbb292 design
+s 6e1c0bd app.core
+s ecd5206 app
+s 7dbad17 notes
+s f5defe3 notes
+s 485d2e0 design
+s 5f46841 :app channels
+s c9dfe9e org
+s 2ed9416 app
+s 5573866 app streams
+s 05e2eba kstreams
+s acc6918 kstreams
+s ddb5eee kstreams
+# proc-main, app.core, kstreams state via channels
+
+p 0d545e2 :app queue vals as maps
+s 0dc2837 notes
+s 67106f3 :app vals as maps
+# channels vals as maps
+
+p 7615ecb :app proc-access-store create/delete via channels
+s 497d6ba proc-cruxdb
+s 2dba291 :app crux throws (rocksdb related)  if streams started first; start after
+s c2728ea :app create user in crux
+s 3145bb2 :app evict user
+s bee229e notes
+# proc-cruxdb, create/evict user in crux
+# - crux throws (rocksdb related)  if streams started first; start after
+
+p 17d2eda :app reading from crux-doc
+s 46d31b8 design
+s 753fc83 :app kstream crux-docs into a table with Reduce; add NippySerde
+s 6e942c1 tokens
+s abc5e19 app.core
+s ed83969 kstreams
+s e9b02c2 kstreams
+s 1e144a9 :app join of crux-docs, tokens into lookup ktable
+s 8c2c5d2 :app kjoin takes seconds
+s 1b2a69f notes
+s 38abad9 kstreams
+s 76f94b9 :kstreams alpha.crux-docs
+s bd34d7d streams
+s cdd1d69 kstreams
+s f9536f9 org
+s be365c1 org
+s 9cd88ef design
+s 0cd42cc org
+s 41e01d6 :kstreams access globalktable for fast lookup of user access; crux-docs is read with Nippy, after selectKey downstream topic becomes transit
+# kstreams: reading from and joining crux-doc topic; Nippy and Transit
+# - access globalktable for fast lookup of user access
+# - crux-docs into a table with Reduce; add NippySerde
+# - join of crux-docs, tokens into lookup ktable
+# - kjoin takes seconds
+# - crux-docs is read with Nippy, after selectKey downstream topic becomes transit
+
+p 3d9662d pad
+s d1202f3 gen ec rsa keypairs
+s 09db398 buddy.sign
+s 2a3aefd buddy.sign
+s d6d5a5c notes
+s 14c1173 pad
+s 23c8ccc build
+s 5775895 kstreams renamed
+s 8af1ef4 org
+s 16cb9fd design
+s 33bac8f proc-kstore-user
+s 611b132 design
+s 87e9776 :app proc-keys
+# intorduce buddy.sign, buddy.auth; proc-keys
+
+
+p f954616 app http
+s 350ddf3 http
+s 98eddab http :edn-params
+s eba7dfe http
+s 2e3f049 http
+s d736cd4 http
+s 5c17e4d http
+s 5cae530 org
+s 5c93f74 spec :u/user
+s dba73bf build
+s 852b9bd hashing
+s fba6181 http
+s 1a85234 :app http JWE auth with buddy
+s a82d86b :app http /login
+# http: JWE auth with buddy, storing hashes of passwords in db
+
+p 39b8852 :build stylefruits/gniazdo ws
+s df14690 ws
+# connecting to pedestal ws server with Jetty websockets and stylefruits/gniazdo
+
+p a27a06d pad
+s 5911a7f pad
+s 1daad0b spec
+s 81f227e spec
+s 856b124 spec
+s 9893aef spec
+s 1771090 design
+s 06eb83a spec
+s f476a67 design
+s 7eab4b2 spec
+# game state: spec, next-state-events next-state-derived 
+
+
+p 554e658 ui
+s a4a0272 :ui goog.net.WebSocket
+s c80f866 ui
+s f3ec69f notes
+s c00e8be ui history
+s 9dbf4b4 ui history
+s 89b961b ui history
+s e035cb6 org
+s 7a191ce ui routes
+s 9999c3a ui routes
+s 0bcf944 ui proc-routes
+s 928764c :ui proc-router
+s 10dda72 :ui proc-router
+s 0735c44 :ui proc-renderer
+s e9e5538 :ui hot-realod
+s d325f7c :ui routing
+s b91908c :ui routing
+s 47b91e0 :ui proc-http
+s de547d7 ui
+# ui: history, proc-router, proc-renderer, goog.net.WebSocket
+
+p c2843f8 ui ant-themed.css
+s 15a8112 notes
+# ui: ant-themed.css
+
+p 6e8154b :ui page procs
+s 6319220 ui layout
+s 505ed3a ui pad for antd
+s 23789a8 ui
+s 5a3b426 ui routes
+s 65e3e1b ui create game
+s 0c18807 ui
+s 37c33da notes
+s f0c915d notes
+s fae7940 ui
+s 094144e notes
+s 6d0bb74 notes
+s 58dcc8a notes
+s 911febe ui pad
+s 64de277 :ui pad reagent track used for derived state and reactive update of a component via deref
+s 39dbf99 notes
+s 8571f9c notes
+s 2e176dd design
+s 25a203a ui
+s 151c1c8 ui state
+s 244b295 :ui derived state as reagent atoms, rendering on-demand via cursor, rendering decoupled from system
+s a4111bd build
+# ui: page procs, layout, create-game, reagent track
+# - reagent track used for derived state and reactive update of a component via deref
+# - derived state as reagent atoms, rendering on-demand via cursor, rendering decoupled from system
+
+p 90252d0 :docker lmit container resources
+
+
+p 86be847 :ui http
+s 721da82 ui
+s fc0b1c3 proc-ops
+s d3f8b81 :ui proc-http
+s 08cea3d ui
+s ca66fd9 ui proc-http
+s 6c1d823 ui
+s d9362cb :ui op/login
+s eb2c1f9 :app /settings, authentication
+s 832c24b ui
+s ffd3925 auth
+s a8e2e24 :app http-server :restart op
+s 39fa0d7 :app :ui http, auth
+s f12ed9a :ui hot-realod
+s f8d0262 :ui org
+s 715b6f0 :deps antd
+# ui: proc-ops, proc-http, /login, /settings, authentication
+
+p 8e2425c :ui :build remove legacy deps, upgrade csp namespace to alpha"
+s 324a565 :ui :build
+s 6789668 :ui build
+s 769174d ui build
+# ui: remove legacy deps, upgrade csp namespace to alpha
+
+
+p 8da7d88 ui org
+s 170d20d :ui rc-form-sign-in
+s 0536eb4 :ui render
+s fce788f git
+s 774fb91 :http  /profile
+s 8137e15 :ui op/init
+s 8d808d1 rc-user-identiy
+# ui: rc-form-sign-in rc-user-identiy
+
+p 18a4bad :design project defined in namespaces
+# design project defined in namespaces
+
+p 802a23b ui
+s f205378 :ui routes
+s eb6496e build
+s a6c2f26 org
+s 203e1b6 :ui autocomplete=new-password
+s 4c873a6 http :user/post
+s 6fa3cc8 interceptors
+s dec322e design
+s 18a0fa5 singup
+s b556af1 spec :u/links
+s 1fd140d design
+# ui: singup, autocomplete=new-password, spec :u/links; design: events history, stats and data
+
+p 8e88807 :transit exhchging binary data between runtimes over ws
+s 5acdf80 org
+# transit: exhchging binary data between runtimes over ws
+
+p 2405fe8 game
+s 89eb5e0 org
+s 96751ec org
+s 9db2a5f spec
+s 682f1ca spec
+s c2d7f87 pad
+s 86b9b4a pad
+s 718a27f design
+s 172ad9f game
+s 6f78ae3 pad
+s ebf9aed pad
+s 6ced9df pad
+s 93a7c29 pad
+s ead57e2 org
+s 4459080 game
+s 51e8ab9 game
+s 2b4b4a8 game
+s 1654ed8 game
+s 3864702 pad
+s 5ac77e1 alt!
+s 72d7f67 git
+s 153e0dc datascript
+s 3c65197 game
+s f031b8f derive
+s 6f816a9 derive
+s afe1b29 :game next-state via derive and defmulti
+s 108993d game state
+s 0141a85 org
+s 840ffbc game make-state make-store
+s 26555ea game state
+s 8c9a94f game
+s 673a0ba game
+s 4d409fb game
+s 1678abf game gen
+s e3b558a design
+s 556f73b design
+s cd88332 game
+s 69fe43e org
+# game state: next-state via derive for :plain and :derived state
+
+
+p 5777ea5 game
+s da90f12 game
+s 2dbe72d game
+s 29a12e8 game
+s 4f57ff4 design
+s 4e0e7e5 game
+# game: word sets
+
+
+p 4573d58 gen
+s 9ca3edd gen
+s 5578c22 gen
+s 6626b1d game
+s ff522e2 r/atom lazy
+s 0df70ae org
+s d4dcb96 state
+s 77832e7 render
+s c5503c3 org
+s f958573 org
+s 23448af org
+s c4396b0 webworker
+s f4eb471 using webworker to run 5sec generation of entities
+s b1320c6 org
+s e8b814b design
+s 9d6c0f5 webworker
+s 42b6e27 render
+s 81d533f notes
+s 70be3c6 design
+s 2d6a7f6 devnotes
+s 2d9d6ce upadte-store
+s 2d7591e org
+s a7880e7 org
+s 95a72ca notes
+s 3239eab grid
+s 0deb823 render
+s 7db2543 render
+s d0a234b render
+s 1ff72ab :render updating 4k entites
+s 6c7548e r/with-let
+s 44784fb notes
+s 53fb790 git
+s 450a7a9 notes
+s 453b5a0 notes
+s 31367ac notes
+s 5a4c486 render
+s d2b7896 :ui :advanced compilation
+s c8765f6 render
+s 3a8cc6b notes
+s b110cab notes
+# game: generating and rendering of 4k entites via WebWorker
+
+p e964a39 org
+s 5c9fedf org
+s 7818a33 pad
+s 1d28904 notes
+s 1742d25 transducers
+s a7dd1b3 pad transients
+s 5d1e272 pad
+s c5b8ff4 pad promise-chan
+s 112a8f1 offer! poll!
+s f264676 :pad pipeline-async
+s 216ecfd pad pipeline-blocking
+s 3f5c63c org
+# explore: transducers, transients, promise-chan,  pipeline-async, pipeline-blocking
+
+p e946cc5 :build add cider/cider-nrepl to cljs app to enable intellisense in the editor (same as with clj)
+p 8cec4df :build shadow-cljs :autobuild false
+p 5e90bd7 :build add user.clj to ui to have an option to run compile from repl
+
+
+p 2f5688b design
+s f10434d build
+s dc2ceb9 build
+s a47d8a7 build
+s 111ac00 build
+s dd0fd95 build
+s eb3c92d :build one system
+s 7967a58 spaces
+s 22097fb build
+s c0d81bc :build once system, runner apps
+s 943169b build
+s 4b8c29a build
+s 41b4fe3 spaces
+s 62e45af build
+s 04b8566 org
+s da9ed1c deps
+s 008888d deps
+s 77fb4b4 org
+s 3726edc sapces
+# build: one system
+
+p 3f32a89 pad
+s 210d812 extend-via-metadata
+s 9c0422e pad
+s c1653d3 :pad protocols :extend-via-metadata, same fn names inline without collision
+s 7797eb2 pad
+s 80fa692 pad baz1|
+s e1a7682 pad
+s c0f482a mult.edn
+s 607f041 pad
+s 03f9843 pad
+s 85bddfa pad
+s 9076ad9 pad
+# build: mult.edn
+
+# Rebase 9076ad9 onto 30814d5 (761 commands)
+#
+# Commands:
+# p, s = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
