@@ -1,0 +1,1 @@
+git filter-repo --path README.md --path explore/ --path mult/package.json --path mult/clojure.tmLanguage.json --path .gitattributes --path testing/  --path-glob 'mult/calva/*' --invert-paths
